@@ -1,6 +1,28 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+.course_content{
+    padding: 24px;
+}
+.course_image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    width: 250px;
+}
+.course-image-container{
+    padding: 10px;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 270px;
+    width: 270px;
+    margin: 12px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 5px 5px rgba(0,0,0,0.2); 
+}
 a.navbar-brand {
   white-space: normal;
   text-align: center;
