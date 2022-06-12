@@ -11,6 +11,8 @@ using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using Microsoft.OpenApi.Models;
+using CleanArch.API.Configurations;
+
 namespace CleanArch.API
 {
     public class Startup
@@ -31,6 +33,7 @@ namespace CleanArch.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "University API", Version = "v1" });
             });
             services.AddMediatR(typeof(Startup));
+            services.RegisterAutoMapper();
             RegisterServices(services);
             services.AddControllers();
         }

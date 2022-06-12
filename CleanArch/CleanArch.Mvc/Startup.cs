@@ -1,5 +1,6 @@
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
+using CleanArch.Mvc.Configurations;
 using CleanArch.Mvc.Data;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -38,6 +39,7 @@ namespace CleanArch.Mvc
             services.AddDbContext<UniversityDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("UniversityDBConnection")));
             RegisterServices(services);
             services.AddMediatR(typeof(Startup));
+            services.RegisterAutoMapper();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
